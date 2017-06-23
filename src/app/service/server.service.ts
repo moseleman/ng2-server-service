@@ -46,11 +46,15 @@ export class ServerService {
 		if (uri.startsWith('http:') || uri.startsWith('https:')) {
 			url = uri
 		}
-		//console.log(`server GET: ${url}`)
+		console.log(`server GET: ${url}`)
 
-		let res = await this.http.get(url, search).toPromise()
+		let result
+		await this.http.get(url, search).toPromise()
+		.then(res => {
+			result = res.json()
+		}).catch(e => {console.error(e)})
 
-		return res.json()
+		return result
 	}
 
 	async sendPost(uri: string, data: object = {}): Promise<any> {
@@ -61,10 +65,14 @@ export class ServerService {
 		if (uri.startsWith('http:') || uri.startsWith('https:')) {
 			url = uri
 		}
-		//console.log(`server POST: ${url}`)
+		console.log(`server POST: ${url}`)
 
-		let res = await this.http.post(url, data, options).toPromise()
+		let result
+		await this.http.post(url, data, options).toPromise()
+		.then(res => {
+			result = res.json()
+		}).catch(e => {console.error(e)})
 
-		return res.json()
+		return result
 	}
 }

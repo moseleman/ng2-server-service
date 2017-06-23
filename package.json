@@ -1,10 +1,10 @@
 {
-  "name": "ng2-server-service",
+  "name": "ng2-server-service-demo",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --ec=true --env=prod --host 192.168.1.103 --port 4000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
