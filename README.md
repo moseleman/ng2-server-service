@@ -12,7 +12,7 @@ in src/assets/config.js file
 
 ```
 
-##Example
+## Example
 ```javascript
 import { ServerService } from 'ng2-server-service/server.service'
 
