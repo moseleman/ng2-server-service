@@ -1,5 +1,5 @@
 # ng2-server-service
-angular2 server connect file
+angular2 connect to server lazy bag
 
 in src/assets/config.js file
 ```javascript
